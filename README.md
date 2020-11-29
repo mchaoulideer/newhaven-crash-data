@@ -1,8 +1,10 @@
-# Hartford Crashes
+# New Haven Crashes
 
-Interactive heatmap of car crashes in Hartford between 2015 and 2020 which
+Interactive heatmap of car crashes in New Haven between 2015 and 2020 which
 displays pre-processed data from [UCONN Crash Data Repository](https://www.ctcrash.uconn.edu/).
 It can be adapted for other towns in Connecticut, or other states that have similar data.
+
+Adapted from Hartford Crashes project.
 
 ![Heatmap gif](./img/demo.gif)
 
