@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>New Haven Crashes</title>
+  <title>New Haven Crash Map</title>
 
   <meta name="description" content="Interactive heatmap of car crashes in New Haven.">
   <meta name="author" content="Ben Midyette, adapted from a project by Picturedigits">
@@ -28,8 +28,6 @@
 <body class="helvetica">
 
   <div class="fixed bottom-0 left-0 mb1 ml2" style="z-index: 999">
-    <a href="https://www.ctprf.org/programs_services/transport-hartford/" class="dim">
-      <img src="./img/transporthartford.png" alt="Transport Hartford" class="o-100 h2"></a>
     <a href="https://www.picturedigits.com" class="dim ml1">
       <img src="./img/picturedigits.png" alt="Picturedigits" class="o-70 w4"></a>
   </div>
@@ -37,10 +35,11 @@
   <div id="map" class="vh-100 vw-100 bg-near-white"></div>
 
   <div id="legend" class="bg-white fixed top-0 left-0 pa3 mt2 ml2 br1 o-90" style="z-index: 999; width: 450px">
-    <h1 class="f3 mt0">New Haven Crashes</h1>
+    <h1 class="f3 mt0">New Haven Crashes:</h1>
+    <h3>Resulting in Injury or Death</h3>
 
     <p class="measure">
-      This is a heatmap of vehicle crashes in New Haven.
+      This is a heatmap of vehicle crashes in New Haven resulting in injury or death.
       Use the slider to change the time frame.
       Zoom in to hotspots to see individual crash location data.
     </p>
@@ -54,7 +53,7 @@
 
         <h5 class="f5 mb1 mt3">Crash Participants</h5>
         <label>
-          <input type="checkbox" id="vehiclesOnly"> Vehicles only
+          <input type="checkbox" id="vehiclesOnly"> Vehicles Only
         </label>
 
         <label>
@@ -65,13 +64,11 @@
           <input type="checkbox" id="cyclists" class="ml2"> Cyclists
         </label>
 
-        <h5 class="f5 mb1 mt3">Injuries</h5>
+        <h5 class="f5 mb1 mt3">Impact</h5>
         <label>
-          <input type="checkbox" id="propertyDamage"> Property damage
+          <input type="checkbox" id="injury"> Injuries Only
         </label>
-        <label>
-          <input type="checkbox" id="injury" class="ml2"> Injury
-        </label>
+        
         <label>
           <input type="checkbox" id="fatal" class="ml2"> Fatal
         </label>
@@ -96,8 +93,7 @@
       </div>
 
     </form>
-
-
+ 
   </div>
 
   <script>
@@ -162,7 +158,7 @@
             : ('From ' + formattedFrom + ' to ' + formattedTo)
 
           text += ', there ' + (crashesTotal === 1 ? 'was ' : 'were ') + (crashesTotal === 0 ? 'no' : crashesTotal.toLocaleString())
-          text += ' car crash' + (crashesTotal === 1 ? '' : 'es') + ' in New Haven.'
+          text += ' dangerous car crash' + (crashesTotal === 1 ? '' : 'es') + ' in New Haven.'
 
           if (crashesTotal > 1) {
             text += ' Of those, ' + (crashesPed > 0 ? crashesPed.toLocaleString() : ' none');
