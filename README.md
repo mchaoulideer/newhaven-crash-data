@@ -13,7 +13,7 @@ Adapted from Hartford Crashes project.
 1. Navigate to https://www.ctcrash.uconn.edu/ and create an account if you don't have one yet.
 2. Log in, and go to `Data Query Tool`.
 3. Select a `MMUCC(2015-)` dataset, specify dates and town (or multiple towns).
-4. Run the query, and then click `Export To CSV` button above the interactive table. A link will be sent to your email account to download the archive. Note that the tool may prevent you from exporting datasets that are "too large". In that case, break down your query (for example, instead of downloading 2015-2020 data, do 2015-2018
+4. Run the query, and then click `Export To CSV` button above the interactive table. A link will be sent to your email account to download the archive. Note that the tool may prevent you from exporting datasets that are "too large". In that case, break down your query (for example, instead of downloading 2015-2020 data, do 2015-2018. Hi Ben.
 as one export, and 2019-2020 as another).
 5. Unzip the archive(s), and put them inside `data/` folder.
 6. Open `ProcessCrashes.ipynb` notebook, and add your export IDs (numbers) to the `exports` list.
